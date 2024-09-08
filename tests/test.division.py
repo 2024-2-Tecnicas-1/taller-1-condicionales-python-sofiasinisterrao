@@ -1,12 +1,9 @@
-import sys
-from pathlib import Path
 import unittest
+from pathlib import Path
+import sys
 
-# Se adiciona el path del directorio padre,
-# para que podamos ejecutar los tests sin inconveniente
+# Añadimos el directorio padre al path para que podamos importar desde src
 root_path = Path(__file__).resolve().parent.parent
-print('root_path:')
-print(root_path)
 sys.path.append(str(root_path))
 
 from src.division import evaluar
